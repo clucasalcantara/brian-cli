@@ -1,0 +1,51 @@
+{
+  "name": "brian-cli",
+  "description": "CLI to Brian's brain",
+  "version": "0.0.0",
+  "author": "Caio @clucasalcantara",
+  "bin": {
+    "run": "./bin/run"
+  },
+  "bugs": "https://github.com/clucasalcantara/brian-cli.git/brian-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "eslint": "^4",
+    "eslint-config-oclif": "^1",
+    "globby": "^8"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/clucasalcantara/brian-cli.git/brian-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "run",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "https://github.com/clucasalcantara/brian-cli.git/brian-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json npm-shrinkwrap.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
